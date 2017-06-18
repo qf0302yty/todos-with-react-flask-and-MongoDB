@@ -11,6 +11,7 @@ dom操作和ajax借用jquery，样式上使用bootstrap，图标展示方面使�
 运行方面，直接运行run.py并在浏览器中访问127.0.0.1：5000即可
 
 附上相关插件的地址，感谢这些插件作者的优秀工作：
+
 backstrech：实现动态且自适应的图片背景  https://github.com/jquery-backstretch/jquery-backstretch
 
 textillate:优秀的文本动画插件 https://github.com/jschr/textillate
