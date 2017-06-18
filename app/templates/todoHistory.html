@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+	<title>基于Flask+React+MongoDB的Todo应用</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-datetimepicker.min.css') }}">
+	<link href="{{ url_for('static',filename='css/animate.css') }}" rel="stylesheet">
+
+</head>
+<body>
+	<input type="checkbox" id="sideToggle">
+	<aside>
+		<h2>Menu</h2>
+		<ul>
+			<a href="/"><li><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;&nbsp;主页</span></li></a>
+			<a href="/todoNow"><li><span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;待办事项</span></li></a>
+			<a href="/todoHistory"><li><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;&nbsp;历史事项</li></a>
+			<a href="/todoCharts"><li><span class="glyphicon glyphicon-stats"></span>&nbsp;&nbsp;&nbsp;统计图</li></a>
+			<li data-toggle="modal" data-target="#aboutUs"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;&nbsp;关于我们</li>
+		</ul>
+	</aside>
+	<div id="wrap">
+		<div id="wrapContent">
+			<label id="sideMenuControl" for="sideToggle" onclick="javascript:asideHeight()">=</label>
+			<div class="container">
+				<div class="jumbotron">
+					<p>历史事项</p>
+					<div id="done-container">
+					</div>
+      			</div>
+      		</div>
+		</div>
+	</div>
+	<div class="modal fade" id="aboutUs" tabindex="-1" role-"dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+					 </button>
+					 <h4 class="modal-title" id="myModalLabel">
+					 	关于我们
+					 </h4>
+					</div>
+					<div class="modal-body">
+						<p>本系统将提供一套您专属的、轻量化、简洁、易用的待办事项管理系统，从而最大程度地提高您的工作效率。您不仅可以记录当前事项，还可以轻而易举地查询历史事项，并生成统计图表。</p>
+						<p>本系统使用以下语言编写</p>
+						<table class="table" id="tableI">
+							<tr>
+								<td><img class="img1" src="../static/picture/html5.jpg"/></td>
+								<td><img class="img1" src="../static/picture/css3.jpg"/></td>
+								<td><img class="img1" src="../static/picture/javascript.png"/></td>
+							</tr>
+							<tr>
+								<td>超文本标记语言</td>
+								<td>级联样式表</td>
+								<td>最流行的全栈化语言</td>
+							</tr>
+							<tr>
+								<td><img class="img2" src="../static/picture/python.jpg"/></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>强大而优雅的解释型面向对象语言</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+						<p>本系统的完成得益于以下开源项目的支持</p>
+						<table class="table" id="tableI">
+							<tr>
+								<td><img class="img2" src="../static/picture/flask.png"/></td>
+								<td><img class="img3" src="../static/picture/jquery.jpg"/></td>
+								<td><img class="img2" src="../static/picture/mongoDB.png"/></td>
+							</tr>
+							<tr>
+								<td>基于Python的微内核后端框架</td>
+								<td>强大简洁的JavaScript库</td>
+								<td>最流行的非关系型数据库</td>
+							</tr>
+							<tr>
+								<td><img class="img2" src="../static/picture/react-w.jpg"/></td>
+								<td><img class="img2" src="../static/picture/bootstrap.png"/></td>
+								<td><img class="img3" src="../static/picture/highcharts.jpg"/></td>
+							</tr>
+							<tr>
+								<td>来自facebook的下一代前端框架</td>
+								<td>最受欢迎的前端样式框架</td>
+								<td>纯JavaScript编写的图表库</td>
+							</tr>
+							<tr>
+								<td><img class="img3" src="../static/picture/textillate.png"/></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>CSS3和JavaScript实现的文本动画插件</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>	
+					<div class="modal-footer">
+					    <b>哈尔滨工业大学·软件学院&copy;2016</b>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script src="../static/js/lib/jquery-1.11.1.min.js"></script>
+	<script src="../static/js/lib/jquery.lettering.js"></script>
+	<script src="../static/js/lib/bootstrap.min.js"></script>
+	<script src="../static/js/lib/jquery.textillate.js"></script>
+	<script src="../static/js/lib/jquery.backstretch.min.js"></script>
+	<script src="../static/js/lib/index.js"></script>
+    <script src="../static/js/lib/bootstrap-datetimepicker.min.js"></script>
+    <script src="../static/js/lib/bootstrap-datetimepicker.fr.js"></script>
+	<script type="text/javascript" src="../static/js/build/bundle2.js"></script>
+</body>
+</html>
